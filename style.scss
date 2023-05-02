@@ -1,3 +1,12 @@
+// レスポンシブ
+$sp:765px;
+
+@mixin sp{
+    @media screen and (max-width: ($sp)) {
+        @content;
+    }
+}
+
 header {
     width: 100%;
     background-color: rgba($color: #e0eeef, $alpha: 0.5);
@@ -16,11 +25,17 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 
+    @include sp{
+    background-image:none;
+    }
 }
 
 .navigation {
     text-align: right;
     margin-right: 100px;
+    @include sp{
+    margin: 0;
+    }
 }
 
 .nav-list {
@@ -50,6 +65,15 @@ h1 {
     font-size: 40px;
     text-align: center;
     margin: 20px 0;
+    @include sp{
+    font-size: 30px;
+    }
+}
+
+p {
+@include sp{
+font-size: 13px;
+}
 }
 .abouttxt{
 text-align: center;
@@ -65,6 +89,10 @@ img,
 .worktext {
     width: 500px;
     height: 300px;
+    @include sp{
+    width:100%;
+    height: auto;
+    }
 }
 
 .work-contents {
@@ -73,6 +101,13 @@ img,
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 40px auto 60px;
+
+    @include sp{
+    width: 100%;
+     }
+}
+.work-contentslist{
+margin: 20px 0 35px;
 }
 
 img {
@@ -86,6 +121,9 @@ img {
 h2 {
     font-size: 20px;
     margin: 25px 0;
+    @include sp{
+    font-size: 15px;
+    }
 }
 
 .worktext {
@@ -105,3 +143,4 @@ footer {
     margin: 0 auto;
     max-width: 640px;
 }
+

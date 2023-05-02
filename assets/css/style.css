@@ -16,10 +16,20 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+@media screen and (max-width: 765px) {
+  body {
+    background-image: none;
+  }
+}
 
 .navigation {
   text-align: right;
   margin-right: 100px;
+}
+@media screen and (max-width: 765px) {
+  .navigation {
+    margin: 0;
+  }
 }
 
 .nav-list {
@@ -48,6 +58,17 @@ h1 {
   text-align: center;
   margin: 20px 0;
 }
+@media screen and (max-width: 765px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  p {
+    font-size: 13px;
+  }
+}
 
 .abouttxt {
   text-align: center;
@@ -64,6 +85,13 @@ img,
   width: 500px;
   height: 300px;
 }
+@media screen and (max-width: 765px) {
+  img,
+  .worktext {
+    width: 100%;
+    height: auto;
+  }
+}
 
 .work-contents {
   width: 70vw;
@@ -71,6 +99,15 @@ img,
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 40px auto 60px;
+}
+@media screen and (max-width: 765px) {
+  .work-contents {
+    width: 100%;
+  }
+}
+
+.work-contentslist {
+  margin: 20px 0 35px;
 }
 
 img:hover {
@@ -82,6 +119,11 @@ img:hover {
 h2 {
   font-size: 20px;
   margin: 25px 0;
+}
+@media screen and (max-width: 765px) {
+  h2 {
+    font-size: 15px;
+  }
 }
 
 .worktext {
