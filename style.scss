@@ -1,7 +1,7 @@
 // レスポンシブ
-$sp:765px;
+$sp: 765px;
 
-@mixin sp{
+@mixin sp {
     @media screen and (max-width: ($sp)) {
         @content;
     }
@@ -14,27 +14,28 @@ header {
     padding: 20px 0;
     position: fixed;
     top: 0;
-    z-index: 5;
 }
 
 body {
-    background-image: url("https://beiz.jp/images_P/water/water_00013.jpg");
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    // background-image: url("https://beiz.jp/images_P/water/water_00013.jpg");
+    // background-size: contain;
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+    // z-index: 1;
 
-    @include sp{
-    background-image:none;
+    @include sp {
+        background-image: none;
     }
 }
 
 .navigation {
     text-align: right;
     margin-right: 100px;
-    @include sp{
-    margin: 0;
+
+    @include sp {
+        margin: 0;
     }
 }
 
@@ -65,35 +66,42 @@ h1 {
     font-size: 40px;
     text-align: center;
     margin: 20px 0;
-    @include sp{
-    font-size: 30px;
+
+    @include sp {
+        font-size: 30px;
     }
 }
 
 p {
-@include sp{
-font-size: 13px;
+    @include sp {
+        font-size: 13px;
+    }
 }
-}
-.abouttxt{
-text-align: center;
-margin: 100px 0;
+
+.abouttxt {
+    text-align: center;
+    margin: 100px 0;
 }
 
 section {
     margin-top: 134px;
     text-align: center;
 }
-
-img,
-.worktext {
-    width: 500px;
-    height: 300px;
-    @include sp{
-    width:100%;
-    height: auto;
-    }
+.work-contentslist{
+width: 500px;
+height: 400px;
+margin: 40px 0 50px;
+img{
+width: 70%;
+height: auto;
+    &:hover {
+        box-shadow: 50px 50px 50px rgb(0 0 0 / 20%);
+        transform: translateY(-7px);
+        transition: .1s;
 }
+}
+}
+
 
 .work-contents {
     width: 70vw;
@@ -102,27 +110,17 @@ img,
     justify-content: space-between;
     margin: 40px auto 60px;
 
-    @include sp{
-    width: 100%;
-     }
-}
-.work-contentslist{
-margin: 20px 0 35px;
-}
-
-img {
-    &:hover {
-        box-shadow: 50px 50px 50px rgb(0 0 0 / 20%);
-        transform: translateY(-7px);
-        transition: .1s;
+    @include sp {
+        width: 100%;
     }
 }
 
 h2 {
     font-size: 20px;
     margin: 25px 0;
-    @include sp{
-    font-size: 15px;
+
+    @include sp {
+        font-size: 15px;
     }
 }
 
@@ -134,8 +132,10 @@ h2 {
 footer {
     text-align: center;
     width: 100%;
+    margin-top: 150px;
     padding: 30px 0;
-    background-color: rgba($color: #fff, $alpha: 0.5);
+    background-color: rgba($color: #e0eeef, $alpha: 0.5);
+
 }
 
 // contact.html
@@ -144,3 +144,11 @@ footer {
     max-width: 640px;
 }
 
+// about.html
+.profileIcon 
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border:solid 2px skyblue;
+}
