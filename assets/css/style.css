@@ -7,12 +7,6 @@ header {
   top: 0;
 }
 
-@media screen and (max-width: 765px) {
-  body {
-    background-image: none;
-  }
-}
-
 .navigation {
   text-align: right;
   margin-right: 100px;
