@@ -133,6 +133,5 @@ footer p {
 .profileIcon img {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
-  border: solid 2px skyblue;
+  margin: 50px;
 }/*# sourceMappingURL=style.css.map */
